@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    font-family: "Poppins" sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --primary-color: #def2f1;
+  --secondary-color: #66ada1;
+  --text-color: #292b37;
+  --max-width: 1200px;
+  --font: "DM Sans", sans-serif;
+}
+
+/*Nav section styles*/
+
+header{
+  display: grid;
+  overflow: hidden;
+  margin-bottom: 9rem;
+}
+
+nav{
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav-header{
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+}
+
+.nav-menu-btn{
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.logo{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul{
+  list-style: none;
+}
+
+.nav-links{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0 2rem 2rem;
+  background-color: var(--secondary-color);
+  z-index: -1;
+  transition: transform 0.3s;
+}
+
+.nav-links.open{
+  transform: translateY(100%);
+}
+
+.nav-links .btn{
+  background-color: var(--primary-color);
+}
+
+.nav-links a:hover{
+  color: var(--primary-color);
+}
+
+.btn{
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+  border-radius: 2rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #113d35;
+  color: var(--primary-color);
+}
+
+.swiper-slide{
+  max-width: 400px;
+}
+
+.profile-card{
+  max-width: 370px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.image .profile-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.profile-card .text-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+}
+.text-data .name{
+  font-size: 22px;
+  font-weight: 500;
+}
+.text-data .job{
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile-card .media-buttons{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.media-buttons .link{
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  margin: 0 8px;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+}
+.profile-card .buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.buttons .button{
+  background-color:  var(--secondary-color);
+  padding: 8px 24px;
+  margin: 0 10px;
+  border-radius: 24px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buttons .button:hover{
+  background-color: var(--text-color);
+}
+.profile-card .analytics{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.analytics .data{
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  padding: 0 20px;
+  border-right: 2px solid #e7e7e7;
+}
+.data:last-child {
+  border-right: none;
+}
+.data i{
+  font-size: 18px;
+  margin-right: 6px;
+}
+.profile-card::before{
+  position: absolute;
+  content: '';
+  height: 36%;
+  width: 100%;
+  background-color:  var(--secondary-color);
+  top: 0;
+  left: 0;
+  border-radius: 24px 24px 0 0;
+}
+
+@media (max-width: 767px) {
+  .swiper {
+    display: flex;
+    justify-content: center;
+  }
+}
